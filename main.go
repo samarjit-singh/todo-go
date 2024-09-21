@@ -25,8 +25,8 @@ func main () {
 	// fmt.Println("prints the address", p)
 	// fmt.Println("prints the actual value", *p)
 	
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.Status(200).JSON(fiber.Map{"msg": "Hello world"})
+	app.Get("/api/todos", func(c *fiber.Ctx) error {
+		return c.Status(200).JSON(todos)
 	})
 
 	// Create todo
